@@ -1,0 +1,10 @@
+p {
+  font-family: Lato;
+}
+.text-red {
+  color: red;
+}
+.card-header {
+  font-weight: bold;
+  border-bottom: 1px solid green;
+}

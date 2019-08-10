@@ -1,0 +1,32 @@
+<h1>Content Projection Demo</h1>
+
+<p>Basic card with single slot projection:</p>
+
+<app-basic-card>
+  <h3>This is the card body</h3>
+</app-basic-card>
+<app-basic-card>
+  <h5>We can pass in whatever we want</h5>
+  <h5>And however much we want</h5>
+</app-basic-card>
+<app-basic-card>
+  <h2 class="text-red">We can also style it how we want</h2>
+</app-basic-card>
+
+<p>The content in the BasicCardComponent is output however we pass it in because we used a single ng-content tag inside the component for projection.</p>
+
+<p>Also, look in the app.component.css file and notice that while I have declared styles for a class of .card-header, the components above did not apply that due to the default style encapsulation that Angular uses.</p>
+
+<app-complex-card>
+  <p class="card-header">This is my card header</p>
+  <h3 class="card-body">This is my card body</h3>
+  <p class="card-footer">This is my card footer</p>
+</app-complex-card>
+
+<app-complex-card>
+  <p class="card-footer">This is my card footer</p>
+  <p class="card-header">This is my card header</p>
+  <h3 class="card-body">This is my card body, and order doesn't matter</h3>
+</app-complex-card>
+
+<p>In these last two examples, we can see that the .card-header styles are now applied. Also, it doesn't matter which order we place the content that will be projected since we are selecting by class and determining the output inside the ComplexCardComponent.</p>
